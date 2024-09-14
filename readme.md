@@ -83,4 +83,4 @@
 
 # MER
 
-![MER](/imagens/MER.png)
+![mer](/imagens/MER.PNG)
