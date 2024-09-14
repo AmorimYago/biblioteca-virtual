@@ -79,3 +79,8 @@
 ## Tela 6
 
 ![tela de anuncio](/imagens/alta6.jpg)
+
+
+# MER
+
+![MER](/imagens/MER.png)
