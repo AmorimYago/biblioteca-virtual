@@ -30,27 +30,27 @@
 
 ## Tela 1
 
-![tela de inicio](/imagens/baixa1.JPG)
+![tela de inicio](/imagens/baixa1.jpg)
 
 ## Tela 2
 
-![tela de login](/imagens/baixa2.JPG)
+![tela de login](/imagens/baixa2.jpg)
 
 ## Tela 3
 
-![tela de perfil do cliente](/imagens/baixa3.JPG)
+![tela de perfil do cliente](/imagens/baixa3.jpg)
 
 ## Tela 4
 
-![tela de carrinho](/imagens/baixa4.JPG)
+![tela de carrinho](/imagens/baixa4.jpg)
 
 ## Tela 5
 
-![tela produto](/imagens/baixa5.JPG)
+![tela produto](/imagens/baixa5.jpg)
 
 ## Tela 6
 
-![tela de anuncio](/imagens/baixa6.JPG)
+![tela de anuncio](/imagens/baixa6.jpg)
 
 
 
@@ -58,24 +58,24 @@
 
 ## Tela 1
 
-![tela de inicio](/imagens/alta1.JPG)
+![tela de inicio](/imagens/alta1.jpg)
 
 ## Tela 2
 
-![tela de login](/imagens/alta2.JPG)
+![tela de login](/imagens/alta2.jpg)
 
 ## Tela 3
 
-![tela de perfil do cliente](/imagens/alta3.JPG)
+![tela de perfil do cliente](/imagens/alta3.jpg)
 
 ## Tela 4
 
-![tela de carrinho](/imagens/alta4.JPG)
+![tela de carrinho](/imagens/alta4.jpg)
 
 ## Tela 5
 
-![tela produto](/imagens/alta5.JPG)
+![tela produto](/imagens/alta5.jpg)
 
 ## Tela 6
 
-![tela de anuncio](/imagens/alta6.JPG)
+![tela de anuncio](/imagens/alta6.jpg)
