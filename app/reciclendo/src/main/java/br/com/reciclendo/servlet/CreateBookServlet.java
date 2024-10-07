@@ -1,7 +1,7 @@
 package br.com.reciclendo.servlet;
 
-import br.com.reciclendo.servlet.dao.BookDao;
-import br.com.reciclendo.servlet.model.Book;
+import br.com.reciclendo.dao.BookDao;
+import br.com.reciclendo.model.Book;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -18,16 +18,16 @@ public class CreateBookServlet extends HttpServlet {
 
         String title = request.getParameter("book-title");
         String author = request.getParameter("book-author");
-        String desc = request.getParameter("book-desc");
-        double value = Double.parseDouble(request.getParameter("book-value"));
-        String category = request.getParameter("book-cate");
+        String des = request.getParameter("book-des");
+        String gender = request.getParameter("book-gender");
+        double price = Double.parseDouble(request.getParameter("book-price"));
 
         Book book = new Book();
-        book.setTitulo(title);
-        book.setAutor(author);
-        book.setDescricao(desc);
-        book.setValor(value);
-        book.setCategoria(category);
+        book.setTitle(title);
+        book.setAuthor(author);
+        book.setDes(des);
+        book.setGender(gender);
+        book.setPrice(price);
 
         new BookDao().createBook(book);
 
