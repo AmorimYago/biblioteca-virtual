@@ -1,16 +1,20 @@
 package br.com.reciclendo.dao;
 
 import br.com.reciclendo.model.Book;
+import jdk.internal.org.jline.terminal.TerminalBuilder;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.SQLException;
+import java.util.ArrayList;
+import java.util.List;
 
 public class BookDao {
 
     public void createBook (Book book) {
 
+        public List<Book> findAllCars() {
         String SQL = "INSERT INTO BOOKS(TITLE, AUTHOR, DES, GENDER, PRICE) VALUES (?,?,?,?,?)";
 
         try {
@@ -26,11 +30,26 @@ public class BookDao {
             preparedStatement.setDouble(5, book.getPrice());
             preparedStatement.execute();
 
+            ResultSet resultSet = preparedStatement.executeQuery();
+
+            List<Book> books = new ArrayList<>();
+
+            while (resultSet.next()) {
+                String bookTitle = resultSet.getString("Title");
+                Book book = new Book(bookTitle);
+                books.add(book);
+            }
+
             System.out.println("Livro cadastrado com sucesso");
+
 
             //connection.close();
         } catch (SQLException e) {
             throw new RuntimeException("Falha ao conectar o banco de dados" + e);
         }
     }
+
+    }
+
+
 }

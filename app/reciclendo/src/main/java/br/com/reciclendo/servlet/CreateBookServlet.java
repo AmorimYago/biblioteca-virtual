@@ -9,13 +9,13 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
-
-@WebServlet("/create-book")
+import java.util.List;
+@WebServlet("/find-all-books")
 public class CreateBookServlet extends HttpServlet {
 
     @Override
-    protected void doPost (HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-
+    protected void doGet (HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+            super.doGet (request, response);
         String title = request.getParameter("book-title");
         String author = request.getParameter("book-author");
         String des = request.getParameter("book-des");
