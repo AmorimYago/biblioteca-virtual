@@ -1,5 +1,6 @@
 package br.com.reciclendo.dao;
 
+import br.com.reciclendo.config.ConnectionPoolConfig;
 import br.com.reciclendo.model.Book;
 
 import java.sql.Connection;
@@ -20,9 +21,7 @@ public class BookDao {
         String SQL = "INSERT INTO BOOKS(TITLE, AUTHOR, DES, GENDER, PRICE) VALUES (?,?,?,?,?)";
 
         try {
-            Connection conn = DriverManager.getConnection("jdbc:h2:~/test","sa","sa");
-
-            System.out.println("Sucesso em conectar o banco de dados - createBook");
+            Connection conn = ConnectionPoolConfig.getConnection();
 
             PreparedStatement preparedStatement = conn.prepareStatement(SQL);
             preparedStatement.setString(1, book.getTitle());
@@ -48,10 +47,7 @@ public class BookDao {
         String SQL = "SELECT * FROM BOOKS";
 
         try {
-
-            Connection conn = DriverManager.getConnection("jdbc:h2:~/test", "sa", "sa");
-
-            System.out.println("Banco de dados conectado com sucesso - findAllBooks");
+            Connection conn = ConnectionPoolConfig.getConnection();
 
             PreparedStatement ps = conn.prepareStatement(SQL);
 
@@ -93,9 +89,7 @@ public class BookDao {
         String SQL = "DELETE BOOKS WHERE ID = ?";
 
         try {
-            Connection conn = DriverManager.getConnection("jdbc:h2:~/test", "sa", "sa");
-
-            System.out.println("Banco de dados conectado com sucesso - deleteBookById");
+            Connection conn = ConnectionPoolConfig.getConnection();
 
             PreparedStatement ps = conn.prepareStatement(SQL);
             ps.setString(1, bookId);
@@ -119,10 +113,7 @@ public class BookDao {
         String SQL = "UPDATE BOOKS SET TITLE = ?, AUTHOR = ?, DES = ?, GENDER = ?, PRICE = ? WHERE ID = ?";
 
         try {
-
-            Connection conn = DriverManager.getConnection("jdbc:h2:~/test", "sa","sa");
-
-            System.out.println("Banco de dados conectado com sucesso - updateBooks");
+            Connection conn = ConnectionPoolConfig.getConnection();
 
             PreparedStatement ps = conn.prepareStatement(SQL);
 
@@ -145,6 +136,5 @@ public class BookDao {
         }
 
     }
-
 
 }
