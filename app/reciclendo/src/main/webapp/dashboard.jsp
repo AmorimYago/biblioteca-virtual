@@ -30,6 +30,8 @@
                     <form action="/delete-book" method="post">
                         <input type="hidden" id="id" name="id" value="${book.id}">
                         <button type="submit">Deletar</button>
+                        <span> | </span>
+                        <a href="index.jsp?id=${book.id}&title=${book.title}&author=${book.author}&des=${book.des}&gender=${book.gender}&price=${book.price}"Update</a>
                 </td>
             </tr>
         </c:forEach>

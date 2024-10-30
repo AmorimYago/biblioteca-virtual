@@ -24,9 +24,19 @@ public class CreateBookServlet extends HttpServlet {
         String gender = req.getParameter("book-gender");
         double price = Double.parseDouble(req.getParameter("book-price"));
 
+        BookDao bookDao = new BookDao();
         Book book = new Book(id, title, author, des, gender, price);
 
-        new BookDao().createBook(book);
+
+
+        if (id.isBlank()) {
+
+            bookDao.createBook(book);
+
+        } else {
+
+            bookDao.updateBooks(book);
+        }
 
         resp.sendRedirect("/find-all-books");
 

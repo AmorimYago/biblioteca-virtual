@@ -113,5 +113,38 @@ public class BookDao {
 
     }
 
+    // Metodo de atualizar livros
+    public void updateBooks(Book book) {
+
+        String SQL = "UPDATE BOOKS SET TITLE = ?, AUTHOR = ?, DES = ?, GENDER = ?, PRICE = ? WHERE ID = ?";
+
+        try {
+
+            Connection conn = DriverManager.getConnection("jdbc:h2:~/test", "sa","sa");
+
+            System.out.println("Banco de dados conectado com sucesso - updateBooks");
+
+            PreparedStatement ps = conn.prepareStatement(SQL);
+
+            ps.setString(1, book.getTitle());
+            ps.setString(2, book.getAuthor());
+            ps.setString(3, book.getDes());
+            ps.setString(4, book.getGender());
+            ps.setDouble(5, book.getPrice());
+            ps.setString(6, book.getId());
+            ps.execute();
+
+            System.out.println("Livro atualizado com sucesso");
+
+            conn.close();
+
+        } catch (Exception e) {
+
+            System.out.println("Falha em conectar com o banco de dados: " + e.getMessage());
+
+        }
+
+    }
+
 
 }
