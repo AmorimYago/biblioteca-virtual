@@ -17,7 +17,7 @@ public class CreateBookServlet extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws IOException, ServletException {
 
-        String id = req.getParameter("book-id");
+        String id = req.getParameter("id");
         String title = req.getParameter("book-title");
         String author = req.getParameter("book-author");
         String des = req.getParameter("book-des");

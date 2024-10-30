@@ -9,8 +9,14 @@ public class Book {
     private String gender;
     private double price;
 
-    public Book(String tittle) {
-        this.title = tittle;
+    public Book(String title, String author, String des, String gender, double price) {
+
+        this.title = title;
+        this.author = author;
+        this.des = des;
+        this.gender = gender;
+        this.price = price;
+
     }
 
     public Book(String id, String title, String author, String des, String gender, double price) {
