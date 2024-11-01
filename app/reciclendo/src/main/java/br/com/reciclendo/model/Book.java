@@ -8,16 +8,8 @@ public class Book {
     private String des;
     private String gender;
     private double price;
+    private String image;
 
-    public Book(String title, String author, String des, String gender, double price) {
-
-        this.title = title;
-        this.author = author;
-        this.des = des;
-        this.gender = gender;
-        this.price = price;
-
-    }
 
     public Book(String id, String title, String author, String des, String gender, double price) {
         this.id = id;
@@ -26,6 +18,16 @@ public class Book {
         this.des = des;
         this.gender = gender;
         this.price = price;
+    }
+
+    public Book(String id, String title, String author, String des, String gender, double price, String image) {
+        this.id = id;
+        this.title = title;
+        this.author = author;
+        this.des = des;
+        this.gender = gender;
+        this.price = price;
+        this.image = image;
     }
 
     public String getId() {
@@ -52,4 +54,7 @@ public class Book {
         return price;
     }
 
+    public String getImage() {
+        return image;
+    }
 }

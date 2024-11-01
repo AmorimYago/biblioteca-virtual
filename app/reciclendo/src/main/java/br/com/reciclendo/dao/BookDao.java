@@ -18,17 +18,18 @@ public class BookDao {
     public void createBook (Book book) {
 
         // Nome e variáveis do banco de dados
-        String SQL = "INSERT INTO BOOKS(TITLE, AUTHOR, DES, GENDER, PRICE) VALUES (?,?,?,?,?)";
+        String SQL = "INSERT INTO BOOKS(TITLE, IMAGE, AUTHOR, DES, GENDER, PRICE) VALUES (?,?,?,?,?, ?)";
 
         try {
             Connection conn = ConnectionPoolConfig.getConnection();
 
             PreparedStatement preparedStatement = conn.prepareStatement(SQL);
             preparedStatement.setString(1, book.getTitle());
-            preparedStatement.setString(2, book.getAuthor());
-            preparedStatement.setString(3, book.getDes());
-            preparedStatement.setString(4, book.getGender());
-            preparedStatement.setDouble(5, book.getPrice());
+            preparedStatement.setString(2, book.getImage());
+            preparedStatement.setString(3, book.getAuthor());
+            preparedStatement.setString(4, book.getDes());
+            preparedStatement.setString(5, book.getGender());
+            preparedStatement.setDouble(6, book.getPrice());
             preparedStatement.execute();
 
             System.out.println("Livro cadastrado com sucesso");
@@ -59,12 +60,13 @@ public class BookDao {
 
                 String id = resultSet.getString("id");
                 String title = resultSet.getString("title");
+                String image = resultSet.getString("image");
                 String author = resultSet.getString("author");
                 String des = resultSet.getString("des");
                 String gender = resultSet.getString("gender");
                 double price = resultSet.getDouble("price");
 
-                Book book = new Book(id, title, author, des, gender, price);
+                Book book = new Book(id, title, author, des, gender, price, image);
 
                 books.add(book);
             }
@@ -110,7 +112,7 @@ public class BookDao {
     // Metodo de atualizar livros
     public void updateBooks(Book book) {
 
-        String SQL = "UPDATE BOOKS SET TITLE = ?, AUTHOR = ?, DES = ?, GENDER = ?, PRICE = ? WHERE ID = ?";
+        String SQL = "UPDATE BOOKS SET TITLE = ?, IMAGE = ?, AUTHOR = ?, DES = ?, GENDER = ?, PRICE = ? WHERE ID = ?";
 
         try {
             Connection conn = ConnectionPoolConfig.getConnection();
@@ -118,11 +120,12 @@ public class BookDao {
             PreparedStatement ps = conn.prepareStatement(SQL);
 
             ps.setString(1, book.getTitle());
-            ps.setString(2, book.getAuthor());
-            ps.setString(3, book.getDes());
-            ps.setString(4, book.getGender());
-            ps.setDouble(5, book.getPrice());
-            ps.setString(6, book.getId());
+            ps.setString(2, book.getImage());
+            ps.setString(3, book.getAuthor());
+            ps.setString(4, book.getDes());
+            ps.setString(5, book.getGender());
+            ps.setDouble(6, book.getPrice());
+            ps.setString(7, book.getId());
             ps.execute();
 
             System.out.println("Livro atualizado com sucesso");

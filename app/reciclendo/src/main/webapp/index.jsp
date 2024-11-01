@@ -1,76 +1,86 @@
-<%@ page contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
+<!DOCTYPE html>
+<html lang="pt-BR">
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+    pageEncoding="UTF-8"%>
 <%
     response.setContentType("text/html; charset=UTF-8");
     request.setCharacterEncoding("UTF-8");
 %>
-<!DOCTYPE html>
-<html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <title>Cadastro de Livros</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
-          rel="stylesheet"
-          integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
-          crossorigin="anonymous">
-    <style>
-        body {
-            margin: 20px;
-            background-color: #f8f9fa;
-        }
+    <link href="/webjars/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/css/dashboard.css" rel="stylesheet">
+    <link href="/css/style.css" rel="stylesheet">
 
-        h2 {
-            text-align: center;
-            margin-bottom: 20px;
-        }
+    <title>Reciclendo | New Book</title>
 
-        form {
-            max-width: 600px;
-            margin: 0 auto;
-            padding: 20px;
-            background-color: #fff;
-            border-radius: 8px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-        }
-
-        label {
-            font-weight: bold;
-            margin-top: 10px;
-        }
-
-        textarea {
-            height: 150px;
-            resize: vertical;
-        }
-
-        button {
-            width: 100%;
-            margin-top: 20px;
-        }
-
-        /* Estilo do botão "Ir para a lista" */
-                .lista-button {
-                    margin-bottom: 20px; /* Espaçamento abaixo do botão */
-                    background-color: #2196F3;
-                    color: white;
-                }
-
-                .lista-button:hover {
-                    background-color: #1976D2;
-                }
-
-    </style>
 </head>
 
 <body>
-    <h2>Cadastre seu livro</h2>
 
-    <form action="/create-book" method="post">
+<header class="navbar navbar-dark sticky-top bg-dark flex-md-nowrap p-0 shadow">
+    		<a class="navbar-brand col-md-3 col-lg-2 me-0 px-3 fs-6" href="#">Reciclendo</a>
+    		<button class="navbar-toggler position-absolute d-md-none collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#sidebarMenu" aria-controls="sidebarMenu" aria-expanded="false" aria-label="Toggle navigation">
+    			<span class="navbar-toggler-icon"></span>
+    		</button>
+    		<input class="form-control form-control-dark w-100 rounded-0 border-0" type="text" placeholder="Search" aria-label="Search">
+    		<div class="navbar-nav">
+    			<div class="nav-item text-nowrap">
+    				<a class="nav-link px-3" href="#">Sair</a>
+    			</div>
+    		</div>
+    	</header>
+
+    <div class="container-fluid">
+
+        <div class="row">
+
+        <nav id="sidebarMenu" class="col-md-3 col-lg-2 d-md-block bg-light sidebar collapse">
+
+        				<div class="position-sticky pt-3 sidebar-sticky">
+
+        					<ul class="nav flex-column">
+        						<li class="nav-item">
+        							<a class="nav-link" aria-current="page" href="#"><span data-feather="user" class="align-text-bottom"></span> User </a>
+        						</li>
+        					</ul>
+
+        					<hr>
+
+        					<ul class="nav flex-column">
+        						<li class="nav-item">
+        							<a class="nav-link" aria-current="page" href="/find-all-books"><span data-feather="home" class="align-text-bottom"></span> Home </a>
+        						</li>
+        						<li class="nav-item">
+        							<a class="nav-link" href="/"><span data-feather="file-text" class="align-text-bottom"></span> Novo Livro</a>
+        						</li>
+        					</ul>
+
+        				</div>
+
+        			</nav>
+
+        			<main class="col-md-9 ms-sm-auto col-lg-10 px-md-4">
+
+                            <h2>Cadastre seu livro</h2>
+
+                        <div class="table-responsive">
+
+    <form action="/create-book" method="post" enctype="multipart/form-data" class="container">
+
         <div class="mb-3">
             <label for="book-title" class="form-label">Título:</label>
             <input type="text" class="form-control" id="book-title" name="book-title"
                    value="${param.title}" required>
         </div>
-
+        <br>
+        <div class="mb-3">
+            <label for="image" class="form-label">Capa:</label>
+            <input type="file" name ="image" id="image">
+        </div>
+        <br>
         <div class="mb-3">
             <label for="book-author" class="form-label">Autor:</label>
             <input type="text" class="form-control" id="book-author" name="book-author"
@@ -97,8 +107,20 @@
 
         <input type="hidden" id="id" name="id" value="${param.id}">
 
-        <button type="submit" class="btn btn-primary">Salvar</button>
-        <button class="lista-button" onclick="window.location.href='dashboard.jsp'">Ir para a lista</button>
+        <button type="submit" class="btn btn-success">Salvar</button>
     </form>
+
+</div>
+
+</main>
+
+</div>
+
+</div>
+
+<script src="http://localhost:8080/webjars/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+<script src="../js/feather.min.js"></script>
+<script src="../js/dashboard.js"></script>
+
 </body>
 </html>

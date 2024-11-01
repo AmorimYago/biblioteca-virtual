@@ -21,7 +21,7 @@ public class ListBookServlet extends HttpServlet {
 
         req.setAttribute("books", books);
 
-        req.getRequestDispatcher("dashboard.jsp").forward(req, resp);
+        req.getRequestDispatcher("/dashboard.jsp").forward(req, resp);
 
     }
 
