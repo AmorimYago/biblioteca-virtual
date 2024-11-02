@@ -91,7 +91,7 @@
 ![tela de login](/imagens/login.png)
 
 ## Tela Funcional 4
-![tela de cadastro livro](/imagens/cadastrolivro.png)
+![tela de cadastro livro](/imagens/cadastrodelivro.png)
 
 ## Tela Funcional 5
 ![tela de listagem livro](/imagens/listagem.png)
