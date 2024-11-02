@@ -52,6 +52,7 @@
 
 ![tela de anuncio](/imagens/baixa6.jpg)
 
+# Tela 
 
 
 # Protótipos High Fidelity
@@ -80,7 +81,27 @@
 
 ![tela de anuncio](/imagens/alta6.jpg)
 
+## Tela Funcional 1
+![tela de inicio](/imagens/inicio.png)
+
+## Tela Funcional 2
+![tela de cadastro usuario](/imagens/cadastro.png)
+
+## Tela Funcional 3
+![tela de login](/imagens/login.png)
+
+## Tela Funcional 4
+![tela de cadastro livro](/imagens/cadastrolivro.png)
+
+## Tela Funcional 5
+![tela de listagem livro](/imagens/listagem.png)
+
 
 # MER
 
 ![mer](/imagens/MER.PNG)
+
+
+
+
+
