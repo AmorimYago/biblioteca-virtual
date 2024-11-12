@@ -34,7 +34,7 @@ public class BookDao {
 
             System.out.println("Livro cadastrado com sucesso");
 
-            //connection.close();
+            conn.close();
 
         } catch (Exception e) {
             System.out.println("Falha em conectar ao banco de dados" + e.getMessage());

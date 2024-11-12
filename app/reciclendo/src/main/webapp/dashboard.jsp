@@ -21,6 +21,11 @@
     </style>
 </head>
 <body>
+    <c:if test="${sessionScope.loggedUser != null}">
+        <span>${sessionScope.loggedUser}</span>
+        <a href="/logout">Logout</a>
+    </c:if>
+
     <header class="navbar navbar-dark sticky-top bg-dark flex-md-nowrap p-0 shadow">
         <a class="navbar-brand col-md-3 col-lg-2 me-0 px-3 fs-6" href="#">Reciclendo</a>
         <button class="navbar-toggler position-absolute d-md-none collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#sidebarMenu" aria-controls="sidebarMenu" aria-expanded="false" aria-label="Toggle navigation">
@@ -92,7 +97,9 @@
                             <th>Descrição</th>
                             <th>Gênero</th>
                             <th>Valor</th>
-                            <th>Ações</th>
+                            <c:if test="${sessionScope.loggedUser != null}">
+                                <th>Ações</th>
+                            </c:if>
                         </tr>
                         <c:forEach var="book" items="${books}">
                             <c:if test="${(fn:containsIgnoreCase(book.title, param.title) || param.title == null || param.title == '') && (param.genre == book.gender || param.genre == '' || param.genre == null)}">
@@ -104,13 +111,15 @@
                                     <td class="descricao">${book.des}</td>
                                     <td>${book.gender}</td>
                                     <td>R$ ${book.price}</td>
-                                    <td>
-                                        <form action="/delete-book" method="post">
-                                            <input type="hidden" name="id" value="${book.id}">
-                                            <button type="submit" class="btn btn-danger">Deletar</button>
-                                            <a class="btn btn-primary" href="index.jsp?id=${book.id}&title=${fn:escapeXml(book.title)}&author=${fn:escapeXml(book.author)}&des=${fn:escapeXml(book.des)}&gender=${fn:escapeXml(book.gender)}&price=${book.price}">Atualizar</a>
-                                        </form>
-                                    </td>
+                                    <c:if test="${sessionScope.loggedUser != null}">
+                                        <td>
+                                            <form action="/delete-book" method="post">
+                                                <input type="hidden" name="id" value="${book.id}">
+                                                <button type="submit" class="btn btn-danger">Deletar</button>
+                                                <a class="btn btn-primary" href="index.jsp?id=${book.id}&title=${fn:escapeXml(book.title)}&author=${fn:escapeXml(book.author)}&des=${fn:escapeXml(book.des)}&gender=${fn:escapeXml(book.gender)}&price=${book.price}">Atualizar</a>
+                                            </form>
+                                        </td>
+                                    </c:if>
                                 </tr>
                             </c:if>
                         </c:forEach>

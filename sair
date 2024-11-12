@@ -1,0 +1,125 @@
+[33mcommit d8ff1a1c5b5bfe7cea32515e50c8dd21dc029480[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mmaster[m[33m, [m[1;31morigin/master[m[33m, [m[1;31morigin/HEAD[m[33m)[m
+Author: MillenaMonteiro <millena.monteiroo28@gmail.com>
+Date:   Fri Nov 1 21:23:26 2024 -0300
+
+    ajustando nome da tela de cadastro dos livros
+
+[33mcommit 93f1cada161dc88fee83bea4709dea946790e860[m
+Author: MillenaMonteiro <millena.monteiroo28@gmail.com>
+Date:   Fri Nov 1 21:19:46 2024 -0300
+
+    subindo telas funcionais no github
+
+[33mcommit ee00ded50f9e61125b904bac6ddb6944dc7b57f4[m
+Author: MillenaMonteiro <millena.monteiroo28@gmail.com>
+Date:   Fri Nov 1 20:54:44 2024 -0300
+
+    Adicionando telas de Login, Cadastro de Usuário, Tela Inicial + Imagens do carrossel
+
+[33mcommit 32d796a343d396e799e5bf33c1ece52f25303797[m
+Author: Yago Amorim <Swashbuckler3113@outlook.com>
+Date:   Fri Nov 1 18:12:31 2024 -0300
+
+    colocando a funcinalidade de add capa do livro (image) + ajustes visuais + funcionalidade de pesquisa + pré funcionalidade de filtro (ainda não funciona)
+
+[33mcommit 41dbfc877a806b8d0a0c294189fb3b9b028cd646[m
+Author: Yago Amorim <Swashbuckler3113@outlook.com>
+Date:   Wed Oct 30 12:54:38 2024 -0300
+
+    Configurando  pool de conexões
+
+[33mcommit 0477bd682b3a8e9928fe099b6482a61d779f072e[m
+Author: Yago Amorim <Swashbuckler3113@outlook.com>
+Date:   Wed Oct 30 01:33:46 2024 -0300
+
+    Ajustando o erro do ID null, modificando o campo de descrição para texto e aplicando configurações visuais no cadastro e na lista de Livros
+
+[33mcommit 4da4b79d99a03179d202ac51f06717c9187d6f26[m
+Author: Yago Amorim <Swashbuckler3113@outlook.com>
+Date:   Tue Oct 29 21:47:33 2024 -0300
+
+    adicionando a função de atualizar - com problema do ID nulo
+
+[33mcommit af3c9fadcc50662266751f02e015c7503445c639[m
+Author: Yago Amorim <Swashbuckler3113@outlook.com>
+Date:   Tue Oct 29 21:10:05 2024 -0300
+
+    adicionando a função de deletar livros
+
+[33mcommit aa4c4d6b65987873a5efea626357afbee486bf78[m
+Author: Yago Amorim <Swashbuckler3113@outlook.com>
+Date:   Tue Oct 29 20:40:38 2024 -0300
+
+    Corrigindo a listagem de livros
+
+[33mcommit 0b30d847c107e4b8cf0c71d7cba4f173c798f993[m
+Author: LUIZ FELIPE CARDOSO ALVES DOS SANTOS <luizfelipeas2019h@gmail.com>
+Date:   Fri Oct 25 22:33:05 2024 -0300
+
+    Adicionamento aula 3
+
+[33mcommit 49fa0db5a870131963623fd6a96d9ae07e5e9e52[m
+Author: Maria Eduarda Sousa <eduardadesousa.m@gmail.com>
+Date:   Mon Oct 7 20:27:01 2024 -0300
+
+    Ajustando o problema de configuracao do banco de dados, registros acontecendo
+
+[33mcommit fde2c60e5fc8d3309fad60f93dcaea1818c58656[m
+Author: Maria Eduarda de Sousa <maria.essampaio1@senacsp.edu.br>
+Date:   Sun Oct 6 23:02:49 2024 -0300
+
+    criando o método INSERT e configurando conexao com banco de dados
+
+[33mcommit 6ab55147d9999dada99e34b8d1ceabfd124fd7a4[m
+Author: Yago Amorim <Sawshbuckler3113@outlook.com>
+Date:   Mon Sep 30 19:27:40 2024 -0300
+
+    Criando os primeiros passos da aplicação
+
+[33mcommit 0409ac2b1cd334c35fae2e2a12ad5ba13bd7ff1b[m
+Author: Yago Amorim <Sawshbuckler3113@outlook.com>
+Date:   Sat Sep 14 01:48:47 2024 -0300
+
+    Ajustando a imagem do MER
+
+[33mcommit a39101d1d18c54f136348149ed0e607e7ee5dfb4[m
+Author: YAGO DE AMORIM DOS SANTOS <yago.asantos3@senacsp.edu.br>
+Date:   Fri Sep 13 22:34:46 2024 -0300
+
+    Adicionando o MER
+
+[33mcommit 2970d40014c6f7659070a7667fac7b1d8a756513[m
+Author: MILLENA MONTEIRO BARRETO DA SILVA <millena.mbsilva@senacsp.edu.br>
+Date:   Fri Sep 13 22:31:17 2024 -0300
+
+    outra modificação a telas
+
+[33mcommit b5975b6b12faa883faf704dc4c37294c4df5926d[m
+Author: MILLENA MONTEIRO BARRETO DA SILVA <millena.mbsilva@senacsp.edu.br>
+Date:   Fri Sep 13 22:27:35 2024 -0300
+
+    modificando os prototipos
+
+[33mcommit 6f5b227ac74420d56beed98c800a8d31caf6b591[m
+Author: MILLENA MONTEIRO BARRETO DA SILVA <millena.mbsilva@senacsp.edu.br>
+Date:   Fri Sep 13 22:16:07 2024 -0300
+
+    Adicionando Protótipos de Fidelity
+
+[33mcommit 7a631dc27956a342a4dcf22538d7743c2ce2027d[m
+Author: LUIZ FELIPE CARDOSO ALVES DOS SANTOS <luiz.fcasantos@senacsp.edu.br>
+Date:   Fri Aug 30 22:03:00 2024 -0300
+
+    inclusão de funcionalidades 1
+
+[33mcommit 935ceda65320d9178d1162fb4614a4174636e113[m
+Author: Yago Amorim <Sawshbuckler3113@outlook.com>
+Date:   Fri Aug 30 16:46:49 2024 -0300
+
+    adicionando uma descricao
+
+[33mcommit 31fe8577d221581b07a84eafd9be303ed73c32f9[m
+Author: Yago Amorim <Sawshbuckler3113@outlook.com>
+Date:   Fri Aug 30 16:37:30 2024 -0300
+
+    criando o arquivo readme.md do PI
