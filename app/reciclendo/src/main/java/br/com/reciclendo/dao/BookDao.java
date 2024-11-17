@@ -18,7 +18,7 @@ public class BookDao {
     public void createBook (Book book) {
 
         // Nome e variáveis do banco de dados
-        String SQL = "INSERT INTO BOOKS(TITLE, IMAGE, AUTHOR, DES, GENDER, PRICE) VALUES (?,?,?,?,?, ?)";
+        String SQL = "INSERT INTO BOOKS(TITLE, IMAGE, AUTHOR, DES, GENDER, PRICE) VALUES (?,?,?,?,?,?)";
 
         try {
             Connection conn = ConnectionPoolConfig.getConnection();
@@ -66,7 +66,7 @@ public class BookDao {
                 String gender = resultSet.getString("gender");
                 double price = resultSet.getDouble("price");
 
-                Book book = new Book(id, title, author, des, gender, price, image);
+                Book book = new Book(id, title, image, author, des, gender, price);
 
                 books.add(book);
             }

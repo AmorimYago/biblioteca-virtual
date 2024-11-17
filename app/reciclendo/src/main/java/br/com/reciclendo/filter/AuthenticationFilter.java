@@ -7,12 +7,12 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServletRequest;
 import java.io.IOException;
 
-@WebFilter("/admin/*")
+@WebFilter({"/admin/*"})
 public class AuthenticationFilter implements Filter {
 
     @Override
     public void init(FilterConfig filterConfig) throws ServletException {
-        Filter.super.init(filterConfig);
+       // Filter.super.init(filterConfig);
     }
 
     @Override
@@ -28,7 +28,7 @@ public class AuthenticationFilter implements Filter {
 
             servletRequest.setAttribute("message", "Usuario não autenticado!");
 
-            servletRequest.getRequestDispatcher("login.jsp").forward(httpServletRequest, servletResponse);
+            servletRequest.getRequestDispatcher("/login.jsp").forward(httpServletRequest, servletResponse);
         }
     }
 

@@ -39,10 +39,10 @@ public class LoginServlet extends HttpServlet {
 
         }else{
 
-        req.setAttribute("message", "credenciais Invalidas!");
+            req.setAttribute("message", "credenciais Invalidas!");
 
-        //SE AS CREDENCIAIS DO USUARIO ESTIVER ERRADA VAI SER DIRECIONADA PARA TELA LOGIN NOVAMENTE
-        req.getRequestDispatcher("login.jsp").forward(req, resp);
+            //SE AS CREDENCIAIS DO USUARIO ESTIVER ERRADA VAI SER DIRECIONADA PARA TELA LOGIN NOVAMENTE
+            req.getRequestDispatcher("login.jsp").forward(req, resp);
 
         }
 

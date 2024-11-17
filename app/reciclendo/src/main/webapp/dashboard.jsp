@@ -50,7 +50,7 @@
                 <div class="position-sticky pt-3 sidebar-sticky">
                     <ul class="nav flex-column">
                         <li class="nav-item">
-                            <a class="nav-link" aria-current="page" href="#"><span data-feather="user" class="align-text-bottom"></span> User </a>
+                            <a class="nav-link" aria-current="page" href="/login"><span data-feather="user" class="align-text-bottom"></span> User </a>
                         </li>
                     </ul>
                     <hr>

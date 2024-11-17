@@ -9,7 +9,7 @@ import java.sql.ResultSet;
 
 public class UserDao {
 
-    public boolean verifyCredentials(User username) {
+    public boolean verifyCredentials(User user) {
 
         String SQL = "SELECT * FROM USERS WHERE USERNAME = ?";
 
@@ -19,18 +19,18 @@ public class UserDao {
 
             PreparedStatement preparedStatement = conn.prepareStatement(SQL);
 
-            preparedStatement.setString(1, username.getUser_name());
+            preparedStatement.setString(1, user.getUsername());
 
             ResultSet resultSet = preparedStatement.executeQuery();
 
-            System.out.println("Sucesso em selecionar o username");
 
             while (resultSet.next()) {
 
                 String password = resultSet.getString("password");
 
                 //SE A SENHA DO USUARIO FOR IGUAL A SENHA DIGITADA VAI RETORNAR TRUE
-                if (password.equals(username.getPassword())) {
+                if (password.equals(user.getPassword())) {
+                    System.out.println("Sucesso em selecionar o username");
 
                     return true;
 

@@ -2,6 +2,7 @@ package br.com.reciclendo.servlet;
 
 import br.com.reciclendo.dao.BookDao;
 import br.com.reciclendo.model.Book;
+import br.com.reciclendo.model.User;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -21,7 +22,7 @@ public class ListBookServlet extends HttpServlet {
 
         req.setAttribute("books", books);
 
-        req.getRequestDispatcher("/dashboard.jsp").forward(req, resp);
+       req.getRequestDispatcher("/dashboard.jsp").forward(req, resp);
 
     }
 

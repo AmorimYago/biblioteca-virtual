@@ -39,7 +39,7 @@ public class CreateBookServlet extends HttpServlet {
         double price = Double.parseDouble(parameters.get("book-price"));
 
         BookDao bookDao = new BookDao();
-        Book book = new Book(id, title, author, des, gender, price, image);
+        Book book = new Book(id, title, image, author, des, gender, price);
 
 
 
