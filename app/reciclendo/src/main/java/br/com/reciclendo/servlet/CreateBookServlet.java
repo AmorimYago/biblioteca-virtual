@@ -37,9 +37,12 @@ public class CreateBookServlet extends HttpServlet {
         String des = parameters.get("book-des");
         String gender = parameters.get("book-gender");
         double price = Double.parseDouble(parameters.get("book-price"));
+        int isbn10 = Integer.parseInt(parameters.get("book-isbn10"));
+        int isbn13 = Integer.parseInt(parameters.get("book-isbn13"));
+        String editor = parameters.get("book-editor");
 
         BookDao bookDao = new BookDao();
-        Book book = new Book(id, title, image, author, des, gender, price);
+        Book book = new Book(id, title, image, author, des, gender, price, isbn10, isbn13, editor);
 
 
 

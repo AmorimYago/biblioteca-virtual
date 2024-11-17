@@ -1,3 +1,5 @@
+<%@ taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions" %>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -35,24 +37,27 @@
   </div>
 </div>
 
-<form action="/login" method="post">
-  <div class="login-container">
-    <div class="input-wrapper">
-      <img src="img/perfil.png" alt="Ícone Usuário" class="icon">
-      <input type="text" id="username" name="username" class="input-field" placeholder="Usuário">
-    </div>
-    <div class="input-wrapper">
-      <img src="img/chave-inteligente.png" alt="Ícone Senha" class="icon">
-      <input type="password" id="password" name="password" class="input-field" placeholder="Senha">
-    </div>
-    <div class="button-container">
-      <button type="button" onclick="window.location.href='cadastro.html'">CADASTRE-SE</button>
-      <button type="submit">LOGIN</button>
-      <button type="button">RECUPERAR SENHA</button>
-    </div>
-  </div>
-</form>
+<c:if test="${(fn:containsIgnoreCase(user.name, param.name) || param.name == null || param.name == ' ')}">
+  <form action="/login" method="post">
 
+    <div class="login-container">
+      <div class="input-wrapper">
+        <img src="img/perfil.png" alt="Ícone Usuário" class="icon">
+        <input type="text" id="username" name="username" class="input-field" placeholder="Usuário">
+      </div>
+      <div class="input-wrapper">
+        <img src="img/chave-inteligente.png" alt="Ícone Senha" class="icon">
+        <input type="password" id="password" name="password" class="input-field" placeholder="Senha">
+      </div>
+      <span>${requestScope.message}</span>
+      <div class="button-container">
+        <button type="button" onclick="window.location.href='cadastro.html'">CADASTRE-SE</button>
+        <button type="submit">LOGIN</button>
+        <button type="button">RECUPERAR SENHA</button>
+      </div>
+    </div>
+  </form>
+</c:if>
 <footer>
   <img src="img/Capa para facebook igreja neon moderno (1).png" alt="Logo do Rodapé">
 </footer>

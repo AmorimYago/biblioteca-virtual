@@ -21,10 +21,6 @@
     </style>
 </head>
 <body>
-    <c:if test="${sessionScope.loggedUser != null}">
-        <span>${sessionScope.loggedUser}</span>
-        <a href="/logout">Logout</a>
-    </c:if>
 
     <header class="navbar navbar-dark sticky-top bg-dark flex-md-nowrap p-0 shadow">
         <a class="navbar-brand col-md-3 col-lg-2 me-0 px-3 fs-6" href="#">Reciclendo</a>
@@ -39,7 +35,8 @@
 
         <div class="navbar-nav">
             <div class="nav-item text-nowrap">
-                <a class="nav-link px-3" href="#">Sair</a>
+                <span>${sessionScope.loggedUser}</span>
+                    <a class="nav-link px-3" href="/logout">Sair</a>
             </div>
         </div>
     </header>
@@ -97,7 +94,7 @@
                             <th>Descrição</th>
                             <th>Gênero</th>
                             <th>Valor</th>
-                            <c:if test="${sessionScope.loggedUser != null}">
+                            <c:if test="${sessionScope.loggedUser == ADMIN}">
                                 <th>Ações</th>
                             </c:if>
                         </tr>
@@ -111,7 +108,7 @@
                                     <td class="descricao">${book.des}</td>
                                     <td>${book.gender}</td>
                                     <td>R$ ${book.price}</td>
-                                    <c:if test="${sessionScope.loggedUser != null}">
+                                    <c:if test="${sessionScope.loggedUser == ADMIN}">
                                         <td>
                                             <form action="/delete-book" method="post">
                                                 <input type="hidden" name="id" value="${book.id}">
