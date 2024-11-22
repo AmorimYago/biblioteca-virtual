@@ -4,19 +4,19 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cadastro - Reciclendo</title>
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="CSS/estilo.css">
 </head>
 <body>
 
 <header>
     <div class="logo">
-        <img src="img/abra-o-livro.png" alt="logo" width="50">
+        <img src="imagens/abra-o-livro.png" alt="logo" width="50">
         <span>Reciclendo</span>
     </div>
     <nav>
         <ul>
-            <li><img src="img/carrinho-carrinho.png" alt="Carrinho"> <a href="#">Carrinho</a></li>
-            <li><img src="img/coracao.png" alt="Lista de Desejo"> <a href="#">Lista de desejo</a></li>
+            <li><img src="imagens/carrinho-carrinho.png" alt="Carrinho"> <a href="#">Carrinho</a></li>
+            <li><img src="imagens/Coração.png" alt="Lista de Desejo"> <a href="#">Lista de desejo</a></li>
         </ul>
     </nav>
 </header>
@@ -24,39 +24,37 @@
 <div class="banner">
     <p>Um livro usado pode se tornar seu novo conto favorito</p>
     <input type="text" class="search-bar" placeholder="Buscar por Título, Autor, Editora e ISBN.">
-    <button class="search-button"><img src="img/procurar.png" alt="Buscar"></button>
+    <button class="search-button"><img src="imagens/procurar.png" alt="Buscar"></button>
     <div class="menu">
-        <a href="#">Informe seu CEP</a>
         <a href="#">Categorias</a>
-        <a href="#">Mais Vendidos</a>
-        <a href="#">Recomendados</a>
     </div>
 </div>
+<div class="wishlist-header">
+    <div class="register-form">
+        <div class="wishlist-header">
+            <h1>Cadastro do usuario</h1>
+        </div>
+        <label for="name">NOME</label>
+        <input type="text" id="name" class="input-field" placeholder="Nome">
 
-<div class="register-form">
-    <label for="name">NOME COMPLETO</label>
-    <input type="text" id="name" class="input-field" placeholder="Nome">
+        <label for="lastname">SOBRENOME</label>
+        <input type="text" id="lastname" class="input-field" placeholder="Sobrenome">
 
-    <label for="email">E-MAIL</label>
-    <input type="email" id="email" class="input-field" placeholder="E-mail">
+        <label for="email">EMAIL</label>
+        <input type="email" id="email" class="input-field" placeholder="Email">
 
-    <label for="cpf">TELEFONE</label>
-    <input type="text" id="tel" class="input-field" placeholder="(00) 0000-0000">
+        <label for="cpf">CPF</label>
+        <input type="text" id="cpf" class="input-field" placeholder="CPF">
 
-    <label for="cpf">CPF</label>
-    <input type="text" id="cpf" class="input-field" placeholder="CPF">
+        <label for="password">SENHA</label>
+        <input type="password" id="password" class="input-field" placeholder="Senha">
 
-    <label for="lastname">ENDEREÇO</label>
-    <input type="text" id="lastname" class="input-field" placeholder="Endereço">
+        <label for="confirm_password">CONFIRMAÇÃO DE SENHA</label>
+        <input type="password" id="confirm_password" class="input-field" placeholder="Confirmação de Senha">
 
-    <label for="password">SENHA</label>
-    <input type="password" id="password" class="input-field" placeholder="Senha">
-
-    <label for="confirm_password">CONFIRMAÇÃO DE SENHA</label>
-    <input type="password" id="confirm_password" class="input-field" placeholder="Confirmação de Senha">
-
-    <button onclick="window.location.href='Inicial.html'">SALVAR</button>
-</div>
-
+        <div class="botoes">
+            <button class="salvar">salvar</button>
+        </div>
 </body>
 </html>
+

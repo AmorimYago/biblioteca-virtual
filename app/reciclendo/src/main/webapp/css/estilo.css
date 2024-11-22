@@ -1,0 +1,676 @@
+/* Reset CSS */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f5f5f5;
+}
+
+/* Header */
+header {
+    background-color: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    border-bottom: 1px solid #ddd;
+}
+
+.logo {
+    font-size: 1.5em;
+    color: #333;
+    display: flex;
+    align-items: center;
+}
+
+header nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+header nav ul li a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+    font-size: 0.9em;
+}
+
+/* Banner */
+.banner {
+    background-color: #fcf4d9;
+    padding: 20px;
+    text-align: center;
+}
+
+.banner p {
+    font-size: 1.2em;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.search-bar {
+    padding: 8px;
+    border: 1px solid #ccc;
+    width: 60%;
+    font-size: 1em;
+    border-radius: 4px;
+}
+
+.search-button {
+    background-color: #e3dfdf;
+    color: #fff;
+    padding: 8px 15px;
+    border: none;
+    cursor: pointer;
+    border-radius: 4px;
+    margin-left: -50px;
+    font-size: 1em;
+}
+
+/* Menu abaixo da barra de pesquisa */
+.menu {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 15px;
+}
+
+.menu a {
+    background-color: #ffffff;
+    color: #000000;
+    padding: 8px 15px;
+    text-decoration: none;
+    font-size: 0.9em;
+    border: 1px solid #e2e7c8;
+    border-radius: 4px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.menu a:hover {
+    background-color: #f6fce8;
+    color: #000000;
+}
+
+/* Containers */
+.login-container {
+    background-color: #fff;
+    padding: 20px;
+    margin: 30px auto;
+    width: 50%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Ícone de perfil */
+.profile-icon {
+    font-size: 4em;
+    color: #ccc;
+    margin-bottom: 20px;
+}
+
+/* Estilos dos campos de entrada com ícones */
+.input-wrapper {
+    display: flex;
+    align-items: center;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 5px 10px;
+    margin-bottom: 15px;
+    background-color: #fff;
+}
+
+.input-wrapper .icon {
+    color: #888;
+    margin-right: 8px;
+}
+
+.input-field {
+    border: none;
+    outline: none;
+    flex: 1;
+    padding: 8px;
+}
+
+/* Formulário de Registro */
+.register-form {
+    background-color: #fff;
+    padding: 20px;
+    margin: 30px auto;
+    width: 50%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.register-form label {
+    font-weight: bold;
+    margin-bottom: 5px;
+    color: #333;
+}
+
+.register-form .input-field {
+    margin-bottom: 15px;
+    padding: 8px;
+    font-size: 14px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.save-button {
+    padding: 10px 20px;
+    font-size: 1em;
+    margin-right: 10px; /* Espaçamento entre os botões */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+
+}
+
+.save-button:hover {
+    background-color: #f9f9f9;
+    color: #030303;
+
+}
+
+/* Carrossel */
+.carousel-container {
+    width: 100%;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f5f5f5;
+    padding: 20px;
+}
+
+.book-carousel {
+    display: flex;
+    animation: scroll 15s linear infinite;
+}
+
+.book-item {
+    min-width: 125px;
+    height: 195px;
+    margin: 0 10px;
+}
+
+.book-item img {
+    width: 125px;
+    height: 195px;
+    object-fit: cover; /* Garante que a imagem preencha o espaço sem distorção */
+    border-radius: 5px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+@keyframes scroll {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-50%);
+    }
+}
+/* Rodapé */
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+header {
+    background-color: #f4f4f4;
+    padding: 10px;
+}
+
+.container {
+    flex: 1; /* Faz o conteúdo principal ocupar o espaço restante */
+    padding: 20px;
+}
+
+footer {
+    background-color: #f1f2ca;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+    width: 100%;
+}
+
+footer img {
+    max-width: 100%; /* Ajusta a imagem para não ultrapassar o limite da largura */
+    height: auto;
+}
+
+.search-bar {
+    padding: 8px;
+    margin-top: 10px;
+    width: 100%; /* Ajusta a largura da barra de pesquisa */
+    max-width: 400px;
+}
+
+.search-button {
+    background-color: #c2bfbf;
+    border: none;
+    color: rgb(239, 241, 205);
+    cursor: pointer;
+    margin-left: 10px;
+}
+
+.search-button img {
+    width: 20px;
+    height: 20px;
+}
+
+.menu a {
+    color: #878b8e;
+    text-decoration: none;
+    font-size: 18px;
+    margin-top: 20px;
+    display: inline-block;
+}
+
+/* Estilos do carrossel */
+
+
+.book-carousel {
+    display: flex;
+}
+
+.book-item {
+    margin-right: 15px;
+}
+
+.book-item img {
+    width: 200px; /* Ajuste a largura das imagens conforme necessário */
+    height: auto;
+}
+
+/* Estilos para dispositivos maiores */
+@media (min-width: 768px) {
+    .search-bar {
+        width: 50%;
+    }
+
+    .search-button {
+        padding: 12px 25px;
+    }
+}
+
+/* Container dos Produtos */
+.produtos {
+    display: flex;
+    flex-direction: column; /* Alinha os produtos na vertical */
+    align-items: center; /* Centraliza os produtos horizontalmente */
+    gap: 20px; /* Espaçamento entre os produtos */
+    margin: 20px 0;
+}
+
+/* Estilo individual dos Produtos */
+.produto {
+    display: flex; /* Layout horizontal para imagem e descrição */
+    align-items: stretch; /* Estica os itens para terem a mesma altura */
+    justify-content: flex-start; /* Alinha os itens à esquerda */
+    background-color: #fffffd;
+    border: 1px solid #fcf4d9;
+    border-radius: 5px;
+    padding: 15px;
+    width: 80%; /* Ajuste responsivo para centralizar */
+    max-width: 800px; /* Limita a largura máxima */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    gap: 20px; /* Espaçamento entre imagem e descrição */
+    transition: transform 0.3s ease; /* Adiciona um efeito de hover */
+}
+
+.produto:hover {
+    transform: scale(1.02); /* Amplia levemente o produto ao passar o mouse */
+}
+
+/* Imagens dos Produtos */
+.produto img {
+    width: 150px; /* Define o tamanho fixo da imagem */
+    height: auto; /* Mantém proporção da imagem */
+    border-radius: 10px;
+}
+
+/* Informações do Produto */
+.produto .info {
+    flex: 1; /* Faz a descrição ocupar o restante do espaço disponível */
+    display: flex;
+    flex-direction: column; /* Organiza conteúdo verticalmente */
+    justify-content: space-between; /* Garante o alinhamento proporcional */
+    text-align: left; /* Alinha o texto à esquerda */
+}
+
+.produto .info h2 {
+    font-size: 1.5em;
+    margin: 5px 0;
+    color: #0e0e0e;
+}
+
+.produto .info p {
+    margin: 5px 0;
+}
+
+.produto .info .preco {
+    font-size: 1.5em;
+    color: #b9332e;
+    margin: 10px 0;
+    font-weight: bold;
+}
+
+/* Botões */
+.botoes {
+    text-align: left;
+    margin-top: 15px;
+}
+
+.botoes button {
+    padding: 10px 20px;
+    font-size: 1em;
+    margin-right: 10px; /* Espaçamento entre os botões */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.botoes .salvar:hover {
+    background-color: #45a049;
+
+}
+
+.botoes .salvar {
+    background-color: #f9f9f9;
+    color: #030303;
+
+}
+
+.botoes .login{
+    background-color:#d3d3d3;
+    color:#060606;
+
+}
+.botoes .login:hover{
+    background-color: #e4ecb9;
+
+}
+
+
+.botoes .RECUPERAR{
+    background-color:#d3d3d3;
+    color:#060606;
+
+}
+.botoes .RECUPERAR:hover{
+    background-color: #e4ecb9;
+
+
+
+
+}.botoes .cadastre-se{
+        background-color:#f0ecec;
+        color:#060606;
+
+}
+    .botoes .cadastre-se:hover{
+     background-color: #e4ecb9;
+
+
+}
+.botoes .comprar {
+    background-color: #f9f9f9;
+    color: #030303;
+}
+
+.botoes .comprar:hover {
+    background-color: #fcf4d9;
+}
+
+.botoes .adicionar {
+    background-color: #f9f9f9;
+    color: #030303;
+}
+
+.botoes .adicionar:hover {
+    background-color: #fcf4d9;
+}
+.product {
+    display: flex;
+    border: 1px solid #ddd;
+    padding: 10px;
+    margin: 10px 0;
+    background-color: #fff;
+}
+
+.product-image {
+    width: 300px; /* Ajuste a largura para o valor desejado */
+    height: auto; /* Mantém a proporção da imagem */
+    max-width: 100%; /* Garante que a imagem não ultrapasse o tamanho do contêiner */
+    display: block; /* Remove espaçamento extra ao redor da imagem */
+    margin: 0 auto; /* Centraliza a imagem horizontalmente */
+}
+
+.product-details {
+    flex: 1;
+}
+
+.product-title {
+    font-size: 2.0em;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+}
+
+.product p {
+    margin: 5px 0;
+}
+
+.description, .review {
+    margin-top: 15px;
+}
+
+.description h4, .review h4 {
+    margin-bottom: 6px;
+}
+
+.review p {
+    margin: 15px 0;
+}
+
+.quantity {
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+.product .price {
+    color: green;
+    font-weight: bold;
+    margin-top: 15px;
+}
+.botoes {
+    display: flex; /* Torna o contêiner flexível */
+    justify-content: center; /* Centraliza os botões horizontalmente */
+    align-items: center; /* Centraliza os botões verticalmente */
+    gap: 10px; /* Espaçamento entre os botões */
+    margin-top: 20px; /* Espaçamento superior opcional */
+}
+
+.botoes .comprar {
+    background-color: #f9f9f9;
+    color: #030303;
+    border: none; /* Remove a borda, se necessário */
+    padding: 10px 20px; /* Ajusta o espaçamento interno do botão */
+    cursor: pointer; /* Mostra o cursor de ponteiro */
+    border-radius: 5px; /* Deixa os cantos arredondados */
+}
+
+.botoes .comprar:hover {
+    background-color: #45a049; /* Muda a cor ao passar o mouse */
+    color: #fff; /* Muda a cor do texto */
+}
+
+.botoes .adicionar {
+    background-color: #f9f9f9;
+    color: #030303;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.botoes .adicionar:hover {
+    background-color: #fcf4d9;
+    color: #000;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+}
+/*lista de desejo*/
+
+.wishlist-container {
+    background-color: #fff;
+    padding: 20px;
+    margin: 10px auto;
+    width: 70%;
+    box-shadow: 0 1px 8px rgba(239, 236, 173, 0.1);
+
+}
+
+.wishlist-header {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.wishlist-header h1 {
+    margin: 0;
+    font-size: em;
+    color: #333;
+}
+
+.wishlist-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0;
+    border-bottom: 1px solid #ddd;
+}
+
+.wishlist-item:last-child {
+    border-bottom: none;
+}
+
+.wishlist-item img {
+    max-width: 100px;
+    margin-right: 20px;
+}
+
+.wishlist-item-details {
+    flex-grow: 1;
+}
+
+.wishlist-item-details h2 {
+    margin: 0;
+    font-size: 1.2em;
+    color: #333;
+}
+
+.wishlist-item-details p {
+    margin: 5px 0;
+    color: #666;
+}
+
+.wishlist-item-actions {
+    text-align: right;
+}
+
+.wishlist-item-actions button {
+    background-color: #ded8d6;
+    color: #050505;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+
+.wishlist-item-actions button:hover {
+    background-color: #eff0c0;
+}
+
+header nav ul li {
+    display: flex;
+    align-items: center; /* Garante que os ícones fiquem centralizados verticalmente */
+}
+
+header nav ul li img {
+    width: 24px; /* Ajusta o tamanho do ícone (carrinho, coração, etc.) */
+    height: 24px; /* Garante que os ícones tenham a mesma altura */
+    margin-right: 8px; /* Dá espaço entre o ícone e o texto */
+}
+.logo {
+    display: flex;
+    align-items: center;  /* Centraliza verticalmente o conteúdo */
+    gap: 10px;  /* Adiciona espaço entre o ícone e o texto */
+}
+
+.logo img {
+    width: 40px; /* Ajuste o tamanho do ícone conforme necessário */
+    height: auto; /* Mantém a proporção da imagem */
+}
+
+.logo span {
+    font-size: 1.5em;  /* Ajusta o tamanho do texto */
+    color: #333; /* Cor do texto */
+    font-weight: bold; /* Torna o texto em negrito */
+}
+.payment-form {
+    background-color: #fff;
+    padding: 20px;
+    margin: 30px auto;
+    width: 50%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.payment-form h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.input-field {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.salvar {
+    width: 100%;
+    padding: 15px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.salvar:hover {
+    background-color: #45a049;
+}
+
+/* Garantir que o formulário seja responsivo */
+@media (max-width: 768px) {
+    .payment-form {
+        width: 80%;
+    }
+}
