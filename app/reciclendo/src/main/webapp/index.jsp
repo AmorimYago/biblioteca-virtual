@@ -86,17 +86,35 @@
             <input type="text" class="form-control" id="book-author" name="book-author"
                    value="${param.author}" required>
         </div>
-
+        <br>
         <div class="mb-3">
             <label for="book-des" class="form-label">Descrição:</label>
             <textarea class="form-control" id="book-des" name="book-des"
                       placeholder="Escreva uma descrição detalhada..." required>${param.des}</textarea>
         </div>
-
+        <br>
         <div class="mb-3">
             <label for="book-gender" class="form-label">Gênero:</label>
             <input type="text" class="form-control" id="book-gender" name="book-gender"
                    value="${param.gender}" required>
+        </div>
+
+        <div class="mb-3">
+            <label for="book-isbn10" class="form-label">ISBN10:</label>
+            <input type="text" class="form-control" id="book-isbn10" name="book-isbn10"
+                   value="${param.isbn10}" required>
+        </div>
+
+        <div class="mb-3">
+            <label for="book-isbn13" class="form-label">ISBN13:</label>
+            <input type="text" class="form-control" id="book-isbn13" name="book-isbn13"
+                   value="${param.isbn13}" required>
+        </div>
+
+        <div class="mb-3">
+            <label for="book-editor" class="form-label">Editor:</label>
+            <input type="text" class="form-control" id="book-editor" name="book-editor"
+                   value="${param.editor}" required>
         </div>
 
         <div class="mb-3">

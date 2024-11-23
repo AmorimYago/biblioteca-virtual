@@ -93,6 +93,9 @@
                             <th>Autor</th>
                             <th>Descrição</th>
                             <th>Gênero</th>
+                            <th>ISBN10</th>
+                            <th>ISBN13</th>
+                            <th>Editor</th>
                             <th>Valor</th>
                             <c:if test="${sessionScope.loggedUser == ADMIN}">
                                 <th>Ações</th>
@@ -107,6 +110,9 @@
                                     <td>${book.author}</td>
                                     <td class="descricao">${book.des}</td>
                                     <td>${book.gender}</td>
+                                    <td>${book.isbn10}</td>
+                                    <td>${book.isbn13}</td>
+                                    <td>${book.editor}</td>
                                     <td>R$ ${book.price}</td>
                                     <c:if test="${sessionScope.loggedUser == ADMIN}">
                                         <td>
