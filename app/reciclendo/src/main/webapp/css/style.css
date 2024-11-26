@@ -1,152 +1,617 @@
+/* Estilo Geral */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f7f6f6;
+}
 
-  /* Estilo Geral */
-  body {
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #f5f1f1;
+  color: rgb(8, 8, 8);
+  padding: 10px 20px;
+}
+
+.logo {
+  font-size: 1.5rem !important; /* Usando 'rem' para evitar conflito com o tamanho de outras fontes */
+  color: #333 !important; /* Garante que a cor do texto seja consistente */
+  display: flex;
+  align-items: center;
+  text-decoration: none !important; /* Remover sublinhado */
+}
+
+.logo img {
+  width: 50px !important; /* Definindo o tamanho da imagem */
+  height: auto !important; /* Mantendo a proporção da imagem */
+  margin-right: 10px; /* Garantir que haja espaço entre a imagem e o texto */
+}
+
+.logo span {
+  font-size: 1.5rem !important; /* Tamanho do texto */
+  color: #333 !important; /* Cor do texto */
+  font-weight: bold !important; /* Deixa o texto em negrito */
+  margin-left: 10px; /* Espaço entre a imagem e o texto */
+}
+
+/* Garantir que o link não tenha sublinhado */
+a.logo {
+  text-decoration: none !important;
+  color: inherit !important;
+}
+
+nav ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+nav li {
+  margin-left: 20px;
+  display: flex;
+  align-items: center;
+}
+
+nav li img {
+  width: 20px;
+  margin-right: 5px;
+}
+
+nav li a {
+  color: rgb(0, 0, 0);
+  text-decoration: none;
+}
+
+nav li a:hover {
+  background-color: rgba(200, 200, 200, 0.3);
+  border-radius: 5px;
+  padding: 10px;
+}
+
+/* Ajustes para o banner */
+.banner {
+  background-color: #F5DEB3;
+  padding: 20px;
+  text-align: center;
+}
+
+.banner p {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.search-bar {
+  padding: 10px;
+  width: 50%;
+  border: 1px solid #ccc;
+  border-radius: 50px;
+  margin-right: 1px;
+}
+
+.search-button {
+  background-color: #bbc5bc;
+  border: none;
+  color: white;
+  padding: 10px 10px;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.search-button:hover {
+  background-color: #717271;
+}
+
+/* Formulário de Login */
+.login-container {
+  background-color: white;
+  padding: 20px 30px;
+  margin: 20px auto;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 400px;
+  text-align: center;
+}
+
+.input-wrapper {
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+.input-wrapper img {
+  width: 20px;
+  margin-right: 10px;
+}
+
+.input-field {
+  border: none;
+  outline: none;
+  width: 100%;
+}
+
+.button-container button {
+  background-color: #bbc5bc;
+  color: rgb(46, 44, 44);
+  border: none;
+  padding: 10px 15px;
+  margin: 5px;
+  border-radius: 5px;
+  cursor: pointer;
+  width: 100%;
+}
+
+.button-container button:hover {
+  background-color: #717271;
+}
+
+/* Rodapé */
+footer {
+  text-align: center;
+  padding: 20px;
+  background-color: #333;
+  color: white;
+}
+
+footer img {
+  width: 750px;
+}
+
+/* Garantir que a logo tenha o estilo desejado e o link não tenha interferências */
+.logo {
+    font-size: 1.5em;      /* Tamanho da fonte do texto */
+    color: #333;           /* Cor do texto */
+    display: flex;
+    align-items: center;   /* Alinha o texto e o ícone verticalmente */
+    text-decoration: none; /* Remover sublinhado no link */
+}
+
+/* Rodapé */
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    margin: 0;
     font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #f7f6f6;
-  }
+}
 
-  header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background-color: #f5f1f1;
-    color: rgb(8, 8, 8);
-    padding: 10px 20px;
-  }
-
-  .logo img {
-    vertical-align: middle;
-  }
-
-  .logo span {
-    font-size: 20px;
-    margin-left: 10px;
-  }
-
-  nav ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    display: flex;
-  }
-
-  nav li {
-    margin-left: 20px;
-    display: flex;
-    align-items: center;
-  }
-
-  nav li img {
-    width: 20px;
-    margin-right: 5px;
-  }
-
-  nav li a {
-    color: rgb(0, 0, 0);
-    text-decoration: none;
-  
-  }
-
-  /* Banner */
-  .banner {
-    background-color: #F5DEB3;
-    padding: 20px;
-    text-align: center;
-  }
-
-  .banner p {
-    font-size: 18px;
-    margin-bottom: 10px;
-  }
-
-  .search-bar {
+header {
+    background-color: #f4f4f4;
     padding: 10px;
-    width: 50%;
-    border: 1px solid #ccc;
-    border-radius: 50px;
-    margin-right: 1px;
-  }
+}
 
-  .search-button {
-    background-color: #bbc5bc;
-    border: none;
+.container {
+    flex: 1; /* Faz o conteúdo principal ocupar o espaço restante */
+    padding: 20px;
+}
+
+footer {
+    background-color: #f1f2ca;
     color: white;
-    padding: 10px 10px;
-    border-radius: 10px;
+    text-align: center;
+    padding: 20px 0;
+    width: 100%;
+}
+
+footer img {
+    max-width: 100%; /* Ajusta a imagem para não ultrapassar o limite da largura */
+    height: auto;
+}
+
+.search-bar {
+    padding: 8px;
+    margin-top: 10px;
+    width: 100%; /* Ajusta a largura da barra de pesquisa */
+    max-width: 400px;
+}
+
+.search-button {
+    background-color: #c2bfbf;
+    border: none;
+    color: rgb(239, 241, 205);
     cursor: pointer;
-  }
+    margin-left: 10px;
+}
 
-  .menu a {
-    margin: 0 15px;
-    color: #333;
+.search-button img {
+    width: 20px;
+    height: 20px;
+}
+
+.menu a {
+    color: #878b8e;
     text-decoration: none;
-    font-size: 14px;
-  }
+    font-size: 18px;
+    margin-top: 20px;
+    display: inline-block;
+}
 
-  /* Formulário de Login */
-  .login-container {
-    background-color: white;
-    padding: 20px 30px;
-    margin: 20px auto;
-    border-radius: 10px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+/* Estilos do carrossel */
+
+.book-carousel {
+    display: flex;
+}
+
+.book-item {
+    margin-right: 15px;
+}
+
+.book-item img {
+    width: 200px; /* Ajuste a largura das imagens conforme necessário */
+    height: auto;
+}
+
+.logo img {
+    width: 50px;           /* Definindo o tamanho da imagem */
+    height: auto;          /* Mantendo a proporção da imagem */
+}
+
+.logo span {
+    font-size: 1.5em;      /* Ajuste o tamanho do texto conforme necessário */
+    color: #333;           /* Cor do texto, igual ao ícone */
+    font-weight: bold;     /* Deixa o texto em negrito */
+    margin-left: 10px;     /* Espaço entre o ícone e o texto */
+}
+
+/* Garantir que o link "Reciclendo" não seja sobrescrito por nenhuma outra regra */
+a.logo {
+    text-decoration: none !important;  /* Remove o sublinhado */
+    color: inherit !important;         /* Herda a cor do texto do elemento pai */
+}
+
+/* Carrossel */
+.carousel-container {
+    width: 100%;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f5f5f5;
+    padding: 20px;
+}
+
+.book-carousel {
+    display: flex;
+    animation: scroll 15s linear infinite;
+}
+
+.book-item {
+    min-width: 125px;
+    height: 195px;
+    margin: 0 10px;
+}
+
+.book-item img {
+    width: 125px;
+    height: 195px;
+    object-fit: cover; /* Garante que a imagem preencha o espaço sem distorção */
+    border-radius: 5px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+@keyframes scroll {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-50%);
+    }
+}
+
+/* Container dos Produtos */
+.produtos {
+    display: flex;
+    flex-wrap: wrap; /* Permite que os produtos se ajustem ao tamanho da tela */
+    justify-content: center; /* Centraliza os produtos horizontalmente */
+    gap: 20px; /* Espaçamento entre os produtos */
+    margin: 20px 0;
+}
+
+/* Produto Card */
+.product {
+    display: flex;
+    flex-direction: row; /* Alinha a imagem e as informações na mesma linha */
+    align-items: flex-start; /* Alinha os itens no topo */
+    border-radius: 10px; /* Arredonda os cantos */
+    border: 1px solid #ddd; /* Borda leve */
+    padding: 20px; /* Espaçamento interno */
+    background-color: #fff; /* Cor de fundo do card */
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Sombras para dar profundidade */
+    width: 650px; /* Largura fixa para o card */
+    margin: 10px; /* Margem externa do card */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Efeito de hover */
+}
+
+/* Efeito ao passar o mouse sobre o card */
+.product:hover {
+    transform: translateY(-10px); /* Levanta o card */
+    box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.15); /* Aumenta a sombra */
+}
+
+/* Imagem do Produto */
+.product-image {
+    width: 250px; /* Tamanho fixo para a imagem */
+    height: auto; /* Mantém a proporção da imagem */
+    border-radius: 8px; /* Canto arredondado na imagem */
+    object-fit: cover; /* Faz a imagem se ajustar sem distorcer */
+    margin-right: 20px; /* Espaço à direita da imagem */
+}
+
+/* Detalhes do Produto */
+.product-details {
+    display: flex;
+    flex-direction: column; /* Exibe as informações em coluna */
+    flex: 1; /* Faz com que os detalhes ocupem o restante do espaço */
+}
+
+/* Título do Produto */
+.product-title {
+    font-size: 1.8em; /* Tamanho maior para o título */
+    font-weight: bold; /* Título em negrito */
+    text-transform: uppercase; /* Título em caixa alta */
+    margin-bottom: 10px; /* Espaço abaixo do título */
+    color: #333; /* Cor do título */
+}
+
+/* Descrição do Produto */
+.product p {
+    margin: 5px 0;
+    color: #666; /* Cor suave para o texto */
+}
+
+/* Sinopse do Produto */
+.description h4 {
+    font-size: 1.2em; /* Tamanho da sinopse */
+    margin-bottom: 8px; /* Espaço abaixo do título da sinopse */
+    color: #333; /* Cor do título da sinopse */
+}
+
+.description p {
+    font-size: 0.95em; /* Tamanho do texto da sinopse */
+    color: #555; /* Cor suave para o texto */
+    margin-bottom: 15px; /* Espaço após a sinopse */
+}
+
+/* Avaliação do Produto */
+.review p {
+    font-size: 1.1em; /* Tamanho das estrelas */
+    color: #ffa500; /* Cor das estrelas */
+    margin-bottom: 10px;
+}
+
+/* Preço */
+.product .price {
+    font-size: 1.4em; /* Aumenta o tamanho do preço */
+    font-weight: bold; /* Preço em negrito */
+    color: green; /* Cor do preço */
+    margin-top: 15px; /* Espaço acima do preço */
+}
+
+/* Botões */
+.botoes {
+    display: flex;
+    gap: 10px; /* Espaçamento entre os botões */
+    margin-top: 20px; /* Espaço acima dos botões */
+}
+
+.botoes button {
+    background-color: #f9f9f9;
+    color: #030303;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease; /* Transição suave ao passar o mouse */
+    width: 48%; /* Botões ocupam metade do card cada um */
+}
+
+.botoes button:hover {
+    background-color: #45a049; /* Muda a cor de fundo do botão */
+    color: #fff; /* Muda a cor do texto */
+}
+
+/* Garantir que a imagem tenha tamanho fixo e se ajuste ao cartão */
+.card {
+  width: 100%; /* Faz com que o cartão ocupe a largura completa da coluna */
+  height: 100%;
+}
+
+.card img {
+  width: 100%; /* A imagem ocupa toda a largura do cartão */
+  height: 200px; /* Define uma altura fixa para as imagens */
+  object-fit: cover; /* Faz com que a imagem cubra o espaço sem distorcer */
+}
+
+/* Estiliza o corpo do cartão */
+.card-body {
+  padding: 1rem; /* Dá um espaçamento confortável dentro do cartão */
+  font-size: 0.9rem; /* Ajusta o tamanho da fonte */
+  height: 120px; /* Define uma altura fixa para o conteúdo */
+  overflow: hidden; /* Garante que o texto não ultrapasse o limite */
+}
+
+/* Ajuste das colunas para garantir que todos os cartões tenham a mesma largura */
+.row-cols-1,
+.row-cols-sm-2,
+.row-cols-md-3 {
+  display: grid; /* Usando grid para um layout flexível */
+  grid-template-columns: repeat(auto-fill, minmax(450px, 1fr)); /* Ajusta as colunas conforme o tamanho da tela */
+  gap: 1rem; /* Espaçamento entre as colunas */
+}
+
+/* Aplica o estilo de sombra ao cartão */
+.card.shadow-sm {
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1), 0 1px 2px rgba(0, 0, 0, 0.08);
+  border-radius: 8px; /* Borda arredondada */
+}
+
+/* Tamanho da fonte do texto do card */
+.card-text {
+  font-size: 0.875rem; /* Ajusta o tamanho da fonte */
+  color: #333; /* Cor do texto */
+}
+
+/* Estilos para o formulário */
+.payment-form-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f7f7f7;
+}
+
+   .card {
+       border: 2px solid red !important; /* Borda vermelha visível */
+   }
+
+.payment-form {
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
     width: 100%;
     max-width: 400px;
-    text-align: center;
-  }
+}
 
-  .input-wrapper {
-    display: flex;
-    align-items: center;
+h2 {
+    text-align: center;
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+/* Estilos para os campos de input */
+.form-group {
     margin-bottom: 15px;
-    border: 1px solid #ccc;
-    padding: 10px;
-    border-radius: 5px;
-  }
+}
 
-  .input-wrapper img {
-    width: 20px;
-    margin-right: 10px;
-  }
+label {
+    font-size: 14px;
+    color: #555;
+    margin-bottom: 5px;
+    display: block;
+}
 
-  .input-field {
-    border: none;
+.input-field {
+    width: 100%;
+    padding: 12px;
+    font-size: 16px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    box-sizing: border-box;
+    transition: all 0.3s ease;
+}
+
+.input-field:focus {
+    border-color: #007bff;
     outline: none;
+    box-shadow: 0 0 8px rgba(0, 123, 255, 0.3);
+}
+
+/* Estilos para o botão de submit */
+.submit-btn {
     width: 100%;
-  }
-
-  .button-container button {
-    background-color: #bbc5bc;
-    color: rgb(46, 44, 44);
-    border: none;
-    padding: 10px 15px;
-    margin: 5px;
-    border-radius: 5px;
-    cursor: pointer;
-    width: 100%;
-  }
-
-  .button-container button:hover {
-    background-color: #717271;
-  }
-
-  nav li a:hover {
-    background-color:rgba(200, 200, 200, 0.3);
-    border-radius: 5px;
-    padding: 10px;
-  }
-
-  /* Rodapé */
-  footer {
-    text-align: center;
-    padding: px;
-    background-color: #333;
+    padding: 14px;
+    background-color: #007bff;
     color: white;
-  }
+    border: none;
+    border-radius: 6px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
 
-  footer img {
-    width: 750px;
-  }
+.submit-btn:hover {
+    background-color: #0056b3;
+}
 
+/* Modal de Confirmação */
+.modal {
+    display: none; /* Inicialmente escondida */
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.4); /* Fundo semitransparente */
+}
+
+.modal-content {
+    background-color: #ffffff;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    width: 80%;
+    max-width: 450px;
+    margin: 100px auto;
+    text-align: center;
+}
+
+h2 {
+    font-size: 26px;
+    color: #28a745;
+    margin-bottom: 15px;
+}
+
+p {
+    font-size: 16px;
+    color: #555;
+    margin: 10px 0;
+}
+
+.transaction-details {
+    background-color: #f1f1f1;
+    padding: 15px;
+    border-radius: 6px;
+    margin: 20px 0;
+}
+
+.transaction-details p {
+    font-size: 14px;
+    color: #333;
+}
+
+strong {
+    font-weight: bold;
+    color: #007bff;
+}
+
+.back-to-home {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 12px 20px;
+    background-color: #007bff;
+    color: white;
+    font-size: 16px;
+    text-decoration: none;
+    border-radius: 6px;
+    transition: background-color 0.3s ease;
+}
+
+.back-to-home:hover {
+    background-color: #0056b3;
+}
+
+.close-btn {
+    font-size: 28px;
+    font-weight: bold;
+    color: #aaa;
+    position: absolute;
+    top: 10px;
+    right: 25px;
+    cursor: pointer;
+}
+
+.close-btn:hover,
+.close-btn:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}

@@ -9,13 +9,13 @@ public class Book {
     private String des;
     private String gender;
     private double price;
-    private int isbn10;
-    private int isbn13;
+    private String isbn10;
+    private String isbn13;
     private String editor;
 
 
 
-    public Book(String id, String title, String author, String des, String gender, double price, int isbn10, int isbn13, String editor) {
+    public Book(String id, String title, String author, String des, String gender, double price, String isbn10, String isbn13, String editor) {
         this.id = id;
         this.title = title;
         this.author = author;
@@ -27,7 +27,7 @@ public class Book {
         this.editor = editor;
     }
 
-    public Book(String id, String title, String image, String author, String des, String gender, double price, int isbn10, int isbn13, String editor) {
+    public Book(String id, String title, String image, String author, String des, String gender, double price, String isbn10, String isbn13, String editor) {
         this.id = id;
         this.title = title;
         this.image = image;
@@ -70,11 +70,11 @@ public class Book {
 
     public String getEditor() {return editor;}
 
-    public int getIsbn13() {return isbn13;}
+    public String getIsbn13() {return isbn13;}
 
-    public int getIsbn10() {return isbn10;}
+    public String getIsbn10() {return isbn10;}
 
-    public Book setIsbn13(int isbn13) {
+    public Book setIsbn13(String isbn13) {
         this.isbn13 = isbn13;
         return this;
     }
@@ -84,7 +84,7 @@ public class Book {
         return this;
     }
 
-    public Book setIsbn10(int isbn10) {
+    public Book setIsbn10(String isbn10) {
         this.isbn10 = isbn10;
         return this;
     }

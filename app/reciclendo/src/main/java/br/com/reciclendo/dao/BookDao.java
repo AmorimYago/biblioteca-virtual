@@ -30,8 +30,8 @@ public class BookDao {
             preparedStatement.setString(4, book.getDes());
             preparedStatement.setString(5, book.getGender());
             preparedStatement.setDouble(6, book.getPrice());
-            preparedStatement.setInt(7, book.getIsbn10());
-            preparedStatement.setInt(8, book.getIsbn13());
+            preparedStatement.setString(7, book.getIsbn10());
+            preparedStatement.setString(8, book.getIsbn13());
             preparedStatement.setString(9, book.getEditor());
             preparedStatement.execute();
 
@@ -68,8 +68,8 @@ public class BookDao {
                 String des = resultSet.getString("des");
                 String gender = resultSet.getString("gender");
                 double price = resultSet.getDouble("price");
-                int isbn10 = resultSet.getInt("isbn10");
-                int isbn13 = resultSet.getInt("isbn13");
+                String isbn10 = resultSet.getString("isbn10");
+                String isbn13 = resultSet.getString("isbn13");
                 String editor = resultSet.getString("editor");
 
                 Book book = new Book(id, title, image, author, des, gender, price, isbn10, isbn13, editor);
@@ -131,8 +131,8 @@ public class BookDao {
             ps.setString(4, book.getDes());
             ps.setString(5, book.getGender());
             ps.setDouble(6, book.getPrice());
-            ps.setInt(7, book.getIsbn10());
-            ps.setInt(8, book.getIsbn13());
+            ps.setString(7, book.getIsbn10());
+            ps.setString(8, book.getIsbn13());
             ps.setString(9, book.getEditor());
             ps.setString(10, book.getId());
             ps.execute();

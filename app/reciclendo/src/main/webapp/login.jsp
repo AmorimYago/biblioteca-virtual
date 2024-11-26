@@ -1,43 +1,53 @@
 <%@ taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions" %>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <%@ page contentType="text/html; charset=ISO-8859-1" pageEncoding="ISO-8859-1"%>
+  <link href="/webjars/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="">
+  <meta name="author" content="">
+  <meta name="generator" content="">
+  <meta name="theme-color" content="#7952b3">
+
   <title>Login - Reciclendo</title>
+
   <link rel="stylesheet" href="css/style.css">
+  <link href="/css/dashboard.css" rel="stylesheet">
 
 </head>
+
 <body>
 
 <header>
-  <div class="logo">
-    <img src="img/abra-o-livro.png" alt="logo" width="50">
-    <span>Reciclendo</span>
-  </div>
-  <nav>
-    <ul>
-      <li><img src="img/carrinho-carrinho.png" alt="Carrinho"> <a href="#">Carrinho</a></li>
-      <li><img src="img/coracao.png" alt="Lista de Desejo"> <a href="#">Lista de desejo</a></li>
-    </ul>
-  </nav>
+ <a href="inicio.jsp" class="logo">
+   <img src="img/abra-o-livro.png" alt="logo" width="50">
+   <span>Reciclendo</span>
+ </a>
+    <nav>
+        <ul>
+            <li><a href="perfil.jsp" class="user">
+                <img src="img/user.jpg" alt="user">
+                <span>Perfil</span>
+            </a></li>
+            <li><a href="carrinho.jsp" class="carrinho">
+                <img src="img/carrinho-carrinho.png" alt="carrinho">
+                <span>Carrinho</span>
+            </a></li>
+        </ul>
+    </nav>
+
 </header>
 
 <div class="banner">
   <p>Um livro usado pode se tornar seu novo conto favorito</p>
-  <input type="text" class="search-bar" placeholder="Buscar por Título, Autor, Editora e ISBN.">
+  <input type="text" class="search-bar" placeholder="Buscar Livro">
   <button class="search-button"><img src="img/procurar.png" alt="Buscar"></button>
-  <div class="menu">
-    <a href="#">Informe seu CEP</a>
-    <a href="#">Categorias</a>
-    <a href="#">Mais Vendidos</a>
-    <a href="#">Recomendados</a>
-    <a href="#">Top 10 da Semana</a>
-  </div>
 </div>
 
-<c:if test="${(fn:containsIgnoreCase(user.name, param.name) || param.name == null || param.name == ' ')}">
+<c:if test="${(fn:containsIgnoreCase(user.name, param.name) || param.name == null || fn:trim(param.name) == '')}">
   <form action="/login" method="post">
 
     <div class="login-container">
@@ -51,18 +61,16 @@
       </div>
       <span>${requestScope.message}</span>
       <div class="button-container">
-        <button type="button" onclick="window.location.href='cadastro.html'">CADASTRE-SE</button>
         <button type="submit">LOGIN</button>
-        <button type="button">RECUPERAR SENHA</button>
+        <button type="button" onclick="window.location.href='cadastro.jsp'">CADASTRE-SE</button>
       </div>
     </div>
   </form>
 </c:if>
+
 <footer>
-  <img src="img/Capa para facebook igreja neon moderno (1).png" alt="Logo do Rodapé">
+  <img src="img/logo.jpg" alt="Logo do Rodapé">
 </footer>
 
 </body>
 </html>
-
-

@@ -12,7 +12,7 @@ import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.util.List;
 
-@WebServlet({"/find-all-books", "/admin/find-all-books"})
+@WebServlet({"/find-all-books", "/inicio"})
 public class ListBookServlet extends HttpServlet {
 
     @Override
@@ -23,6 +23,7 @@ public class ListBookServlet extends HttpServlet {
         req.setAttribute("books", books);
 
        req.getRequestDispatcher("/dashboard.jsp").forward(req, resp);
+
 
     }
 

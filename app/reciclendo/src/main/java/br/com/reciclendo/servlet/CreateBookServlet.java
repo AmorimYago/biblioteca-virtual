@@ -6,7 +6,7 @@ import org.apache.commons.fileupload.FileItem;
 import org.apache.commons.fileupload.disk.DiskFileItemFactory;
 import org.apache.commons.fileupload.servlet.ServletFileUpload;
 
-import javax.servlet.ServletException;
+import javax.servlet.*;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
@@ -23,9 +23,12 @@ import static org.apache.commons.fileupload.servlet.ServletFileUpload.isMultipar
 @WebServlet("/create-book")
 public class CreateBookServlet extends HttpServlet {
 
+
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws IOException, ServletException {
 
+        resp.setCharacterEncoding("UTF-8");
+        resp.setContentType("text/html; charset=UTF-8");
         req.setCharacterEncoding("UTF-8");
 
         Map<String, String> parameters = uploadImage(req);
@@ -37,8 +40,8 @@ public class CreateBookServlet extends HttpServlet {
         String des = parameters.get("book-des");
         String gender = parameters.get("book-gender");
         double price = Double.parseDouble(parameters.get("book-price"));
-        int isbn10 = Integer.parseInt(parameters.get("book-isbn10"));
-        int isbn13 = Integer.parseInt(parameters.get("book-isbn13"));
+        String isbn10 = parameters.get("book-isbn10");
+        String isbn13 = parameters.get("book-isbn13");
         String editor = parameters.get("book-editor");
 
         BookDao bookDao = new BookDao();
