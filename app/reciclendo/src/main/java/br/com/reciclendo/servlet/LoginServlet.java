@@ -8,43 +8,41 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 import java.io.IOException;
-
 
 @WebServlet("/login")
 public class LoginServlet extends HttpServlet {
 
+    private UserDao userDao = new UserDao();
+
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-
         req.getRequestDispatcher("login.jsp").forward(req, resp);
     }
 
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-
-        String username = req.getParameter("username");
+        String email = req.getParameter("email");
         String password = req.getParameter("password");
 
-        User user = new User(username, password);
+        User user = userDao.findUserEmailPassword(email, password);
 
-        boolean isValidUser = new UserDao().verifyCredentials(user);
 
-        if (isValidUser) {
+        if (user != null) {
+            HttpSession session = req.getSession();
+            session.setAttribute("Usuario Logado", user);
 
-            req.getSession().setAttribute("Usuario Logado", username);
-
-            //direcionando para a SERVELT de listar os livros
-            resp.sendRedirect("/find-all-books");
-
-        }else{
-
+            if (user.getTipo()) {  // Verifica se o usuário é administrador
+                session.setAttribute("userType", "admin");
+                resp.sendRedirect(req.getContextPath() + "/admin/dashboard.jsp");
+            } else {
+                session.setAttribute("userType", "user");
+                resp.sendRedirect(req.getContextPath() + "/inicio.jsp");
+            }
+        } else {
             req.setAttribute("message", "credenciais Invalidas!");
-
-            //SE AS CREDENCIAIS DO USUARIO ESTIVER ERRADA VAI SER DIRECIONADA PARA TELA LOGIN NOVAMENTE
-            req.getRequestDispatcher("login.jsp").forward(req, resp);
-
+            req.getRequestDispatcher("/login.jsp").forward(req, resp);
         }
-
     }
 }

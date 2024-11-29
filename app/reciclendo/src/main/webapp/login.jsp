@@ -23,7 +23,7 @@
 
 <header>
  <a href="inicio.jsp" class="logo">
-   <img src="img/abra-o-livro.png" alt="logo" width="50">
+   <img src="img/abra-o-livro.png" alt="logo" >
    <span>Reciclendo</span>
  </a>
     <nav>
@@ -47,19 +47,25 @@
   <button class="search-button"><img src="img/procurar.png" alt="Buscar"></button>
 </div>
 
+
+
 <c:if test="${(fn:containsIgnoreCase(user.name, param.name) || param.name == null || fn:trim(param.name) == '')}">
   <form action="/login" method="post">
-
     <div class="login-container">
+        <div class="alert alert-danger alert-dismissible fade show" role="alert">
+            <span>${requestScope.message}</span>
+        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+        </div>
+
       <div class="input-wrapper">
-        <img src="img/perfil.png" alt="Ãcone UsuÃ¡rio" class="icon">
-        <input type="text" id="username" name="username" class="input-field" placeholder="UsuÃ¡rio">
+        <img src="img/perfil.png" alt="Ícone Usuário" class="icon">
+        <input type="text" id="username" name="email" class="input-field" placeholder="Usuário">
       </div>
       <div class="input-wrapper">
-        <img src="img/chave-inteligente.png" alt="Ãcone Senha" class="icon">
+        <img src="img/chave-inteligente.png" alt="Ícone Senha" class="icon">
         <input type="password" id="password" name="password" class="input-field" placeholder="Senha">
       </div>
-      <span>${requestScope.message}</span>
+
       <div class="button-container">
         <button type="submit">LOGIN</button>
         <button type="button" onclick="window.location.href='cadastro.jsp'">CADASTRE-SE</button>
@@ -69,7 +75,7 @@
 </c:if>
 
 <footer>
-  <img src="img/logo.jpg" alt="Logo do RodapÃ©">
+  <img src="img/logo.jpg" alt="Logo do Rodapé">
 </footer>
 
 </body>

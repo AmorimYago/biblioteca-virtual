@@ -47,8 +47,6 @@ public class CreateBookServlet extends HttpServlet {
         BookDao bookDao = new BookDao();
         Book book = new Book(id, title, image, author, des, gender, price, isbn10, isbn13, editor);
 
-
-
         if (id.isBlank()) {
 
             bookDao.createBook(book);
@@ -58,7 +56,7 @@ public class CreateBookServlet extends HttpServlet {
             bookDao.updateBooks(book);
         }
 
-        resp.sendRedirect("/find-all-books");
+        resp.sendRedirect("/admin/dashboard.jsp");
 
     }
 
