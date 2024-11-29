@@ -1,10 +1,13 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
+    <!-- Declaração do tipo de documento HTML5 -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cadastro - Reciclendo</title>
+    <!-- Inclui o CSS do Bootstrap para estilizar o layout -->
     <link href="/webjars/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Inclui o CSS do dashboard para personalizar o estilo do painel -->
     <link href="/css/dashboard.css" rel="stylesheet">
     <link href="/css/style.css" rel="stylesheet">
 </head>
