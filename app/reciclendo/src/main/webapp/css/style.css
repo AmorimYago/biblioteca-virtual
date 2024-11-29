@@ -104,6 +104,7 @@ nav li a:hover {
   background-color: #717271;
 }
 
+
 /* Formulário de Login */
 .login-container {
   background-color: white;
@@ -124,6 +125,8 @@ nav li a:hover {
   padding: 10px;
   border-radius: 5px;
 }
+
+
 
 .input-wrapper img {
   width: 20px;
@@ -192,7 +195,7 @@ header {
 }
 
 footer {
-    background-color: #f1f2ca;
+    background-color: #F5DEB3;
     color: white;
     text-align: center;
     padding: 20px 0;
@@ -463,15 +466,15 @@ a.logo {
     justify-content: center;
     align-items: center;
     height: 100vh;
-    background-color: #f7f7f7;
+    background-color: #F5DEB3;
 }
-
+/*
    .card {
-       border: 2px solid red !important; /* Borda vermelha visível */
-   }
-
+       border: 2px solid red !important;  Borda vermelha visível
+}
+*/
 .payment-form {
-    background-color: #ffffff;
+    background-color: #F5DEB3;
     padding: 20px;
     border-radius: 8px;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
@@ -544,7 +547,7 @@ label {
 }
 
 .modal-content {
-    background-color: #ffffff;
+    background-color: #F5DEB3;
     padding: 30px;
     border-radius: 8px;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);

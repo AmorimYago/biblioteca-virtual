@@ -49,6 +49,7 @@ public class BookDao {
     public List<Book> findAllBooks(){
 
         String SQL = "SELECT * FROM BOOKS";
+        List<Book> books = new ArrayList<>();
 
         try {
             Connection conn = ConnectionPoolConfig.getConnection();

@@ -38,12 +38,10 @@
                 <hr>
                 <ul class="nav flex-column">
                     <li class="nav-item">
-                         <a class="nav-link" aria-current="page" href="/inicio.jsp"><span data-feather="home" class="align-text-bottom"></span> Inicio </a>
+                         <a class="nav-link" aria-current="page" href="/admin/dashboard.jsp"><span data-feather="home" class="align-text-bottom"></span> Inicio </a>
                     </li>
-                </ul>
-                <ul class="nav flex-column">
                     <li class="nav-item">
-                        <a class="nav-link" href="/find-all-books"><span data-feather="file-text" class="align-text-bottom"></span> Livros Cadastrados</a>
+                        <a class="nav-link" href="/admin/index.jsp"><span data-feather="file-text" class="align-text-bottom"></span> Livros Cadastrados</a>
                     </li>
                 </ul>
             </div>

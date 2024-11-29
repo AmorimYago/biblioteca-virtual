@@ -19,9 +19,9 @@
         <nav>
             <ul class="nav">
                 <li class="nav-item">
-                    <a href="/perfil.jsp" class="nav-link d-flex align-items-center">
+                    <a href="/login.jsp" class="nav-link d-flex align-items-center">
                         <img src="img/user.jpg" alt="user" width="30" class="rounded-circle me-2">
-                        Perfil
+                        Login
                     </a>
                 </li>
                 <li class="nav-item">
@@ -32,8 +32,12 @@
                 </li>
             </ul>
         </nav>
-    </div>
 </header>
+    </div>
+        <div class="banner">
+            <p>Um livro usado pode se tornar seu novo conto favorito</p>
+
+        </div>
 
 <div class="container my-5">
     <div class="row justify-content-center">
@@ -44,22 +48,27 @@
                     <label for="name" class="form-label">Nome Completo</label>
                     <input type="text" id="name" class="form-control" placeholder="Digite seu nome completo" required>
                 </div>
+
                 <div class="mb-3">
                     <label for="email" class="form-label">E-mail</label>
                     <input type="email" id="email" class="form-control" placeholder="Digite seu e-mail" required>
                 </div>
+
                 <div class="mb-3">
                     <label for="cpf" class="form-label">CPF</label>
                     <input type="text" id="cpf" class="form-control" placeholder="Digite seu CPF" required>
                 </div>
+
                 <div class="mb-3">
                     <label for="password" class="form-label">Senha</label>
                     <input type="password" id="password" class="form-control" placeholder="Digite sua senha" required>
                 </div>
+
                 <div class="mb-3">
                     <label for="confirm_password" class="form-label">Confirmação de Senha</label>
                     <input type="password" id="confirm_password" class="form-control" placeholder="Confirme sua senha" required>
                 </div>
+
                 <div class="d-grid">
                     <button type="submit" class="btn btn-primary">Salvar</button>
                 </div>

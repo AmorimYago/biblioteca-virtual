@@ -2,6 +2,7 @@ package br.com.reciclendo.config;
 
 import org.apache.commons.dbcp2.BasicDataSource;
 
+import javax.sql.DataSource;
 import java.sql.Connection;
 import java.sql.SQLException;
 
@@ -34,6 +35,7 @@ public class ConnectionPoolConfig {
 
     public static Connection getConnection() throws SQLException {
 
+        DataSource dataSource = getDataSource();
         return getDataSource().getConnection();
 
     }
