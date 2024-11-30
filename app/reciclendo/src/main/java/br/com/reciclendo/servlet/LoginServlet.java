@@ -38,7 +38,7 @@ public class LoginServlet extends HttpServlet {
                 resp.sendRedirect(req.getContextPath() + "/admin/dashboard.jsp");
             } else {
                 session.setAttribute("userType", "user");
-                resp.sendRedirect(req.getContextPath() + "/inicio.jsp");
+                resp.sendRedirect(req.getContextPath() + "/inicio");
             }
         } else {
             req.setAttribute("message", "credenciais Invalidas!");

@@ -49,7 +49,7 @@ public class BookDao {
     public List<Book> findAllBooks(){
 
         String SQL = "SELECT * FROM BOOKS";
-        List<Book> books = new ArrayList<>();
+
 
         try {
             Connection conn = ConnectionPoolConfig.getConnection();
@@ -76,6 +76,7 @@ public class BookDao {
                 Book book = new Book(id, title, image, author, des, gender, price, isbn10, isbn13, editor);
 
                 books.add(book);
+
             }
 
             System.out.println("Selecionado com sucesso * book");

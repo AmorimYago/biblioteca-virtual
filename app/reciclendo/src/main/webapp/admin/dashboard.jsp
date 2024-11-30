@@ -77,38 +77,33 @@
                                 <th>Ações</th>
                             </c:if>
                         </tr>
-                        <tbody>
 
-                        <c:if test="${(fn:containsIgnoreCase(book.title, param.title) || param.title == null || param.title == '') && (param.genre == book.gender || param.genre == '' || param.genre == null)}">
+
                         <c:forEach var="book" items="${books}">
-                                        <div class="col-12 col-sm-6 col-md-4 col-lg-3" style="padding-bottom: 12px;width: 300px;;">
-                                            <a href="#" class="text-decoration-none">
-                                            <td>${book.id}</td>
-                                            <td><img src="/img/${book.image}" alt="capa de um livro" width="100" height="150"></td>
-                                            <td>${book.title}</td>
-                                            <td>${book.author}</td>
-                                            <td>${book.des}</td>
-                                            <td>${book.gender}</td>
-                                            <td>${book.isbn10}</td>
-                                            <td>${book.isbn13}</td>
-                                            <td>${book.editor}</td>
-
-                                            <td>R$ ${book.price}</td>
-                                            <c:if test="${sessionScope.loggedUser != null}">
-                                                <td>
-                                                    <form action="/delete-book" method="post">
-                                                        <input type="hidden" name="id" value="${book.id}">
-                                                        <button type="submit" class="btn btn-danger">Deletar</button>
-                                                        <a class="btn btn-primary" href="/admin/index.jsp?id=${book.id}&title=${fn:escapeXml(book.title)}&author=${fn:escapeXml(book.author)}&des=${fn:escapeXml(book.des)}&gender=${fn:escapeXml(book.gender)}
-                                                        &isbn10=${fn:escapeXml(book.isbn10)}&isbn13=${fn:escapeXml(book.isbn13)}&editor=${fn:escapeXml(book.editor)}&price=${book.price}">Atualizar</a>
-                                                    </form>
-                                                </td>
-                                            </c:if>
-                                            </a>
-                                        </div>
+                            <c:if test="${(fn:containsIgnoreCase(book.title, param.title) || param.title == null || param.title == '') && (param.genre == book.gender || param.genre == '' || param.genre == null)}">
+                                <tr>
+                                    <td>${book.id}</td>
+                                    <td><img src="/img/${book.image}" alt="capa de um livro" width="100" height="150"></td>
+                                    <td>${book.title}</td>
+                                    <td>${book.author}</td>
+                                    <td>${book.des}</td>
+                                    <td>${book.gender}</td>
+                                    <td>${book.isbn10}</td>
+                                    <td>${book.isbn13}</td>
+                                    <td>${book.editor}</td>
+                                    <td>R$ ${book.price}</td>
+                                    <c:if test="${sessionScope.loggedUser == ADMIN}">
+                                        <td>
+                                            <form action="/delete-book" method="post">
+                                                <input type="hidden" name="id" value="${book.id}">
+                                                <button type="submit" class="btn btn-danger">Deletar</button>
+                                                <a class="btn btn-primary" href="index.jsp?id=${book.id}&title=${fn:escapeXml(book.title)}&author=${fn:escapeXml(book.author)}&des=${fn:escapeXml(book.des)}&gender=${fn:escapeXml(book.gender)}&price=${book.price}">Atualizar</a>
+                                            </form>
+                                        </td>
+                                    </c:if>
+                                </tr>
+                            </c:if>
                         </c:forEach>
-                                </c:if>
-                        </tbody>
 
                     </table>
                 </div>

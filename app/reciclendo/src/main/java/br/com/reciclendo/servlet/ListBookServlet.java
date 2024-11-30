@@ -14,7 +14,7 @@ import java.io.IOException;
 import java.util.List;
 
 @WebServlet({"/admin/find-all-books", "/inicio"})
-public class ListBookServlet extends HttpServlet {
+public class    ListBookServlet extends HttpServlet {
 
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
@@ -23,12 +23,18 @@ public class ListBookServlet extends HttpServlet {
 
         req.setAttribute("books", books);
 
-    if (req.getSession().getAttribute("loggedUser") != null) {
+
+        for (Book book: books){
+            System.out.println(book.getAuthor());
+        }
+
+
+    if (req.getSession().getAttribute("Usuario Logado") != null) {
 
         req.getRequestDispatcher("/admin/dashboard.jsp").forward(req, resp);
 
     }else{
-        req.getRequestDispatcher("/inicio.jsp").forward(req, resp);
+        req.getRequestDispatcher("/inicio").forward(req, resp);
     }
 
 
